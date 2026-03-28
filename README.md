@@ -55,7 +55,6 @@ A responsive weather dashboard built with Angular that allows users to search fo
 1. Type any city name into the search bar
 2. Press **Search** or hit **Enter**
 3. View current weather and 5-day forecast
-
 ![Weather Dashboard Screenshot](screenshot.png)
 
 ## AI Acknowledgment
