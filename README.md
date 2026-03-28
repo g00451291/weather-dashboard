@@ -1,59 +1,72 @@
-# WeatherDashboard
+# 🌤 Weather Dashboard
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.5.
+A responsive weather dashboard built with Angular that allows users to search for any city and view current weather conditions along with a 5-day forecast.
 
-## Development server
+## What it does
 
-To start a local development server, run:
+- Search for any city worldwide
+- Displays current temperature, weather condition, feels like, humidity, wind speed and pressure
+- Shows a 5-day weather forecast
+- Responsive dark-themed UI
+- Real-time data from OpenWeatherMap API
 
+## Technologies Used
+
+- **Angular 19** — frontend framework
+- **TypeScript** — programming language
+- **OpenWeatherMap API** — weather data source
+- **Angular HttpClient** — for API requests
+- **RxJS Observables** — for handling async data
+
+## Setup Instructions
+
+### Prerequisites
+- Node.js (v18 or higher)
+- Angular CLI (`npm install -g @angular/cli`)
+- OpenWeatherMap API key (free at [openweathermap.org](https://openweathermap.org))
+
+### Steps
+
+1. Clone the repository:
 ```bash
-ng serve
+   git clone https://github.com/g00451291/weather-dashboard.git
+   cd weather-dashboard
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
+2. Install dependencies:
 ```bash
-ng generate component component-name
+   npm install
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
+3. Add your API key in `src/app/services/weather.ts`:
+```typescript
+   private apiKey = 'YOUR_API_KEY_HERE';
 ```
 
-## Building
-
-To build the project run:
-
+4. Run the development server:
 ```bash
-ng build
+   ng serve
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+5. Open your browser at `http://localhost:4200`
 
-## Running unit tests
+## Usage
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+1. Type any city name into the search bar
+2. Press **Search** or hit **Enter**
+3. View current weather and 5-day forecast
 
-```bash
-ng test
-```
+![Weather Dashboard Screenshot](screenshot.png)
 
-## Running end-to-end tests
+## AI Acknowledgment
 
-For end-to-end (e2e) testing, run:
+This project was developed with the assistance of AI tools:
 
-```bash
-ng e2e
-```
+**Claude (Anthropic)**
+- Guided the overall project architecture and component structure
+- Generated boilerplate code for Angular components and services
+- Helped debug compilation errors (class naming issues between Angular versions)
+- Assisted with CSS styling for the dark theme UI
+- Wrote the initial README documentation
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+All AI-generated code was reviewed, tested, and understood before being used. The final implementation was verified to work correctly and all code logic was understood and explained during development.
