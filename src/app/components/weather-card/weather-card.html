@@ -1,0 +1,28 @@
+<div class="weather-card" *ngIf="weather">
+    <div class="city-name">{{ weather.name }}, {{ weather.sys.country }}</div>
+    <img
+      [src]="'https://openweathermap.org/img/wn/' + weather.weather[0].icon + '@2x.png'"
+      [alt]="weather.weather[0].description"
+      class="weather-icon"
+    />
+    <div class="temp">{{ weather.main.temp | number:'1.0-0' }}°C</div>
+    <div class="description">{{ weather.weather[0].description }}</div>
+    <div class="details">
+      <div class="detail-item">
+        <span class="label">Feels like</span>
+        <span>{{ weather.main.feels_like | number:'1.0-0' }}°C</span>
+      </div>
+      <div class="detail-item">
+        <span class="label">Humidity</span>
+        <span>{{ weather.main.humidity }}%</span>
+      </div>
+      <div class="detail-item">
+        <span class="label">Wind</span>
+        <span>{{ weather.wind.speed }} m/s</span>
+      </div>
+      <div class="detail-item">
+        <span class="label">Pressure</span>
+        <span>{{ weather.main.pressure }} hPa</span>
+      </div>
+    </div>
+  </div>
